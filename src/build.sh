@@ -12,7 +12,8 @@ cd build
 
 #most likely you will have to specify the location of smina and lemon
 #-DSMINA_DIR=$HOME/git/smina -DLEMON_DIR=/usr/lib/cmake/
-cmake -Wno-dev -DLEMON_DIR=/usr/lib/x86_64-linux-gnu/cmake/lemon ../
+cmake -Wno-dev -DLEMON_DIR=/usr/lib/x86_64-linux-gnu/cmake/lemon \
+      -DSMINA_DIR=$HOME/src/smina ../
 
 NPROCS=`getconf _NPROCESSORS_ONLN`
 make -$NPPROCS
